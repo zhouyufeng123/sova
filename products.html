@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="老挝沙发产品全系列展示与筛选。">
+    <title data-zh="产品展示 - 舒适家居" data-lo="ສະແດງຜະລິດຕະພັນ - ເຮືອນທີ່ສະດວກ">产品展示 - 舒适家居</title>
+    <link rel="stylesheet" href="modern-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link" >
+                <img src="./image/logo.png" alt="舒适家居Logo" class="logo-img">
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="index.html" data-zh="首页" data-lo="ໜ້າຫຼັກ">首页</a></li>
+                <li><a href="products.html" data-zh="产品展示" data-lo="ສະແດງຜະລິດຕະພັນ">产品展示</a></li>
+                <li><a href="about.html" data-zh="关于我们" data-lo="ກ່ຽວກັບພວກເຮົາ">关于我们</a></li>
+                <li><a href="contact.html" data-zh="联系我们" data-lo="ຕິດຕໍ່ພວກເຮົາ">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="text-center" data-zh="所有沙发产品" data-lo="ຜະລິດຕະພັນໂຊຟາທັງໝົດ">所有沙发产品</h1>
+            <p class="text-center mb-3" data-zh="使用下方的筛选器找到最适合您的完美沙发。" data-lo="ໃຊ້ຕົວເລືອກລຸ່ມນີ້ເພື່ອຊອກຫາໂຊຟາທີ່ເຫມາະສົມທີ່ສຸດສໍາລັບທ່ານ.">使用下方的筛选器找到最适合您的完美沙发。</p>
+            
+            <!-- 筛选器容器 -->
+            <div class="filters-container">
+                <div class="filters-header">
+                    <h3 data-zh="筛选产品" data-lo="ກັ່ນຕອງຜະລິດຕະພັນ">筛选产品</h3>
+                    <div class="filter-results" id="filterResults">
+                        <span data-zh="正在加载..." data-lo="ກຳລັງໂຫຼດ...">正在加载...</span>
+                    </div>
+                </div>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="filterColor" data-zh="按颜色筛选" data-lo="ເລືອກຕາມສີ">按颜色筛选</label>
+                        <select id="filterColor">
+                            <option value="all" data-zh="所有颜色" data-lo="ທຸກສີ">所有颜色</option>
+                            <option value="米白" data-zh="米白" data-lo="ສີຄຣີມ">米白</option>
+                            <option value="深灰" data-zh="深灰" data-lo="ສີເທົາເຂັ້ມ">深灰</option>
+                            <option value="浅棕" data-zh="浅棕" data-lo="ສີນໍ້າຕານອ່ອນ">浅棕</option>
+                            <option value="深棕" data-zh="深棕" data-lo="ສີນໍ້າຕານເຂັ້ມ">深棕</option>
+                            <option value="蓝色" data-zh="蓝色" data-lo="ສີຟ້າ">蓝色</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterSize" data-zh="按尺寸筛选" data-lo="ເລືອກຕາມຂະໜາດ">按尺寸筛选</label>
+                        <select id="filterSize">
+                            <option value="all" data-zh="所有尺寸" data-lo="ທຸກຂະໜາດ">所有尺寸</option>
+                            <option value="小" data-zh="小 (单人/双人)" data-lo="ນ້ອຍ (1-2 ທີ່ນັ່ງ)">小 (单人/双人)</option>
+                            <option value="中" data-zh="中 (双人/三人)" data-lo="ກາງ (2-3 ທີ່ນັ່ງ)">中 (双人/三人)</option>
+                            <option value="大" data-zh="大 (三人/L型)" data-lo="ໃຫຍ່ (3 ທີ່ນັ່ງ/ມຸມ)">大 (三人/L型)</option>
+                            <option value="特大" data-zh="特大 (L型/组合)" data-lo="ໃຫຍ່ພິເສດ (ຊຸດ)">特大 (L型/组合)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterPrice" data-zh="按价格范围 (LAK)" data-lo="ເລືອກຕາມຊ່ວງລາຄາ (ກີບ)">按价格范围 (LAK)</label>
+                        <select id="filterPrice">
+                            <option value="all" data-zh="所有价格" data-lo="ທຸກລາຄາ">所有价格</option>
+                            <option value="0-3000000" data-zh="低于 3,000,000" data-lo="ຕໍ່າກວ່າ 3,000,000">低于 3,000,000</option>
+                            <option value="3000001-5000000" data-zh="3,000,000 - 5,000,000" data-lo="3,000,000 - 5,000,000">3,000,000 - 5,000,000</option>
+                            <option value="5000001-7000000" data-zh="5,000,001 - 7,000,000" data-lo="5,000,001 - 7,000,000">5,000,001 - 7,000,000</option>
+                            <option value="7000001-99999999" data-zh="7,000,000 以上" data-lo="ສູງກວ່າ 7,000,000">7,000,000 以上</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button type="button" class="btn btn-primary" id="applyFilters" data-zh="应用筛选" data-lo="ນຳໃຊ້ການກັ່ນຕອງ">应用筛选</button>
+                    <button type="button" class="btn btn-secondary" id="resetFilters" data-zh="重置筛选" data-lo="ລີເຊັດການກັ່ນຕອງ">重置筛选</button>
+                </div>
+            </div>
+
+            <!-- 产品网格 -->
+            <div class="products-section">
+                <div class="product-grid" id="productList">
+                    <!-- 产品卡片将通过JavaScript动态加载 -->
+                </div>
+                
+                <!-- 加载状态 -->
+                <div class="loading-state" id="loadingState">
+                    <div class="loading-spinner"></div>
+                    <p data-zh="正在加载产品..." data-lo="ກຳລັງໂຫຼດຜະລິດຕະພັນ...">正在加载产品...</p>
+                </div>
+                
+                <!-- 无结果状态 -->
+                <div class="no-results hidden" id="noResults">
+                    <div class="no-results-icon">🔍</div>
+                    <h3 data-zh="未找到匹配的产品" data-lo="ບໍ່ພົບຜະລິດຕະພັນທີ່ກົງກັບ">未找到匹配的产品</h3>
+                    <p data-zh="请尝试调整筛选条件或重置筛选器" data-lo="ກະລຸນາລອງປັບຕົວກັ່ນຕອງ ຫຼື ລີເຊັດຕົວກັ່ນຕອງ">请尝试调整筛选条件或重置筛选器</p>
+                    <button class="btn btn-primary" id="resetNoResults" data-zh="重置筛选" data-lo="ລີເຊັດການກັ່ນຕອງ">重置筛选</button>
+                </div>
+                
+                <!-- 加载更多按钮 -->
+                <div class="load-more-container hidden" id="loadMoreContainer">
+                    <button class="btn btn-secondary" id="loadMoreBtn" data-zh="加载更多产品" data-lo="ໂຫຼດຜະລິດຕະພັນເພີ່ມເຕີມ">加载更多产品</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        </footer>
+
+    <!-- 悬浮语言切换按钮 -->
+    <button class="floating-language-switcher" id="floatingLangSwitcher" onclick="toggleLanguage()">ລາວ</button>
+
+    <script src="modern-script.js"></script>
+</body>
+</html>

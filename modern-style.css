@@ -1,0 +1,1237 @@
+/* ============================
+   现代家具电商网站样式
+   设计系统变量
+   ============================ */
+:root {
+  /* 颜色系统 */
+  --color-primary: #A67C52;      /* 原木色 - 主色 */
+  --color-secondary: #4A6572;    /* 深蓝灰 - 辅色 */
+  --color-neutral-100: #F5F5F5;  /* 中性色 - 浅灰 */
+  --color-neutral-200: #FFFFFF;  /* 中性色 - 白色 */
+  --color-neutral-800: #333333;  /* 中性色 - 深灰 */
+  
+  /* 功能色 */
+  --color-success: #27AE60;
+  --color-warning: #F39C12;
+  --color-error: #E74C3C;
+  
+  /* 字体系统 */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 间距系统 */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  
+  /* 圆角系统 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* 阴影系统 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* 过渡动画 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* 容器宽度 */
+  --container-max-width: 1200px;
+  --container-padding: var(--space-md);
+}
+
+/* ============================
+   重置与基础样式
+   ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-100);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+
+/* ============================
+   布局与容器
+   ============================ */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+.section-sm {
+  padding: var(--space-xl) 0;
+}
+
+/* ============================
+   导航栏 - 现代化设计
+   ============================ */
+.navbar {
+  background: var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.navbar-menu a {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-800);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.navbar-menu a:hover {
+  color: var(--color-primary);
+  background: rgba(166, 124, 82, 0.1);
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: all var(--transition-normal);
+  transform: translateX(-50%);
+}
+
+.navbar-menu a:hover::after {
+  width: 80%;
+}
+
+/* 悬浮语言切换按钮 */
+.floating-language-switcher {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 999;
+  background: var(--color-primary);
+  color: var(--color-neutral-200);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-lg);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+  min-width: 60px;
+  text-align: center;
+}
+
+.floating-language-switcher:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.floating-language-switcher:active {
+  transform: translateY(0);
+}
+
+/* 移动端悬浮按钮调整 */
+@media (max-width: 768px) {
+  .floating-language-switcher {
+    top: 80px;
+    right: 15px;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.8rem;
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-language-switcher {
+    top: 70px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    min-width: 45px;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* ============================
+   英雄区 - 现代化轮播
+   ============================ */
+.hero-slider-section {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 10;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.slider-control:hover {
+  background: var(--color-primary);
+  color: var(--color-neutral-200);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-control.prev {
+  left: var(--space-lg);
+}
+
+.slider-control.next {
+  right: var(--space-lg);
+}
+
+.hero-text-card {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  max-width: 450px;
+  box-shadow: var(--shadow-xl);
+  z-index: 5;
+}
+
+.hero-text-card h1 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.hero-text-card p {
+  color: var(--color-neutral-800);
+  margin-bottom: var(--space-lg);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ============================
+   按钮系统 - 现代化设计
+   ============================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  gap: var(--space-xs);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-neutral-200);
+}
+
+.btn-primary:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-neutral-200);
+  transform: translateY(-2px);
+}
+
+.btn-shop-now {
+  background: var(--color-primary);
+  color: var(--color-neutral-200);
+  padding: var(--space-md) var(--space-xl);
+  font-size: 1.1rem;
+}
+
+.btn-shop-now:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-category {
+  background: var(--color-primary);
+  color: var(--color-neutral-200);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+}
+
+.btn-category:hover {
+  background: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+/* ============================
+   品类展示 - 现代化卡片设计
+   ============================ */
+.category-section {
+  background: var(--color-neutral-200);
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.category-header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.category-header .subtitle {
+  color: var(--color-neutral-800);
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.category-card {
+  background: var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.category-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 比例 */
+  overflow: hidden;
+}
+
+.category-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.category-card:hover .category-image {
+  transform: scale(1.05);
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(166, 124, 82, 0.9), rgba(74, 101, 114, 0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+.category-icon {
+  font-size: 3rem;
+  color: var(--color-neutral-200);
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.category-description {
+  color: var(--color-neutral-800);
+  margin: 0 var(--space-md) var(--space-md);
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* ============================
+   产品卡片 - 现代化设计
+   ============================ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.product-card {
+  background: var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: var(--color-neutral-100);
+}
+
+.product-info {
+  padding: var(--space-md);
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.product-description {
+  color: var(--color-neutral-800);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+/* ============================
+   产品展示页面专用样式
+   ============================ */
+
+/* 筛选器容器 */
+.filters-container {
+  background: var(--color-neutral-200);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.filters-header h3 {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.filter-results {
+  color: var(--color-neutral-800);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* 筛选器网格 */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.filter-group label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: var(--space-sm);
+  border: 2px solid var(--color-neutral-100);
+  border-radius: var(--radius-md);
+  background: var(--color-neutral-100);
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-neutral-200);
+  box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.1);
+}
+
+.filter-group select:hover {
+  border-color: var(--color-primary);
+}
+
+/* 筛选器操作按钮 */
+.filter-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.filter-actions .btn {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 0.9rem;
+}
+
+/* 产品区域 */
+.products-section {
+  position: relative;
+  min-height: 400px;
+}
+
+/* 加载状态 */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-neutral-100);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--space-md);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: var(--color-neutral-800);
+  opacity: 0.8;
+}
+
+/* 无结果状态 */
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.5rem;
+}
+
+.no-results p {
+  color: var(--color-neutral-800);
+  opacity: 0.8;
+  margin-bottom: var(--space-lg);
+  max-width: 400px;
+}
+
+/* 加载更多容器 */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-neutral-100);
+}
+
+/* 产品网格增强样式 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  opacity: 1;
+  transition: opacity var(--transition-normal);
+}
+
+.product-grid.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* 产品卡片增强样式 */
+.product-card {
+  background: var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-card .product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: var(--color-neutral-100);
+  transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: var(--space-md);
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.product-description {
+  color: var(--color-neutral-800);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.8;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+/* 产品标签 */
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.product-tag {
+  background: rgba(166, 124, 82, 0.1);
+  color: var(--color-primary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+}
+
+/* ============================
+   响应式设计 - 产品页面
+   ============================ */
+@media (max-width: 768px) {
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .filter-actions {
+    width: 100%;
+  }
+  
+  .filter-actions .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .no-results-icon {
+    font-size: 3rem;
+  }
+  
+  .no-results h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-container {
+    padding: var(--space-md);
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-actions {
+    flex-direction: column;
+  }
+  
+  .filter-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ============================
+   打印样式
+   ============================ */
+@media print {
+  .navbar,
+  .footer,
+  .slider-control,
+  .btn {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .container {
+    max-width: none !important;
+  }
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.feature-item p {
+  color: var(--color-neutral-800);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* ============================
+   页脚 - 现代化设计
+   ============================ */
+.footer {
+  background: var(--color-secondary);
+  color: var(--color-neutral-200);
+  padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+  color: var(--color-neutral-200);
+}
+
+.footer-section p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--space-xs);
+}
+
+.footer-section ul li a {
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-section ul li a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.8;
+}
+
+/* ============================
+   表单样式 - 现代化设计
+   ============================ */
+.contact-form {
+  background: var(--color-neutral-200);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  border: 2px solid var(--color-neutral-100);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--color-neutral-100);
+  transition: all var(--transition-normal);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-neutral-200);
+  box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ============================
+   工具类
+   ============================ */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: var(--space-sm); }
+.mt-2 { margin-top: var(--space-md); }
+.mt-3 { margin-top: var(--space-lg); }
+.mt-4 { margin-top: var(--space-xl); }
+
+.mb-1 { margin-bottom: var(--space-sm); }
+.mb-2 { margin-bottom: var(--space-md); }
+.mb-3 { margin-bottom: var(--space-lg); }
+.mb-4 { margin-bottom: var(--space-xl); }
+
+.pt-1 { padding-top: var(--space-sm); }
+.pt-2 { padding-top: var(--space-md); }
+.pt-3 { padding-top: var(--space-lg); }
+.pt-4 { padding-top: var(--space-xl); }
+
+.pb-1 { padding-bottom: var(--space-sm); }
+.pb-2 { padding-bottom: var(--space-md); }
+.pb-3 { padding-bottom: var(--space-lg); }
+.pb-4 { padding-bottom: var(--space-xl); }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+/* ============================
+   响应式设计
+   ============================ */
+@media (max-width: 768px) {
+  /* 导航栏响应式 */
+  .menu-toggle {
+    display: block;
+  }
+  
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-neutral-200);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-lg);
+    gap: var(--space-sm);
+  }
+  
+  .navbar-menu.active {
+    display: flex;
+  }
+  
+  .navbar-menu a {
+    padding: var(--space-sm);
+    text-align: center;
+  }
+  
+  /* 英雄区响应式 */
+  .hero-slider-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .hero-text-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: var(--space-lg) auto;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .hero-text-card h1 {
+    font-size: 2rem;
+  }
+  
+  .slider-control {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .slider-control.prev {
+    left: var(--space-sm);
+  }
+  
+  .slider-control.next {
+    right: var(--space-sm);
+  }
+  
+  /* 品类网格响应式 */
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .category-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* 产品网格响应式 */
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  /* 特色区块响应式 */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .feature-item {
+    padding: var(--space-md);
+  }
+  
+  /* 页脚响应式 */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+  
+  /* 间距调整 */
+  .section {
+    padding: var(--space-xl) 0;
+  }
+  
+  .section-sm {
+    padding: var(--space-lg) 0;
+  }
+  
+  :root {
+    --container-padding: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  /* 小屏幕优化 */
+  .hero-slider-section {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .hero-text-card h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-text-card p {
+    font-size: 1rem;
+  }
+  
+  .category-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .btn-shop-now {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 1rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+}
+
+/* ============================
+   无障碍性优化
+   ============================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 焦点样式 */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  :root {
+    --color-neutral-800: #000000;
+    --color-neutral-100: #FFFFFF;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .navbar,
+  .footer,
+  .slider-control,
+  .btn {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .container {
+    max-width: none !important;
+  }
+}
