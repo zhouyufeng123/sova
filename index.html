@@ -1,253 +1,208 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="lo">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="老挝优质沙发销售 - 经济实用、可持续设计">
-    <title data-zh="舒适家居 - 老挝沙发专家" data-lo="ເຟີນິເຈີທີ່ສະດວກສະບາຍ - ຜູ້ຊ່ຽວຊານໂຊຟາລາວ">舒适家居 - 老挝沙发专家</title>
-    <link rel="stylesheet" href="modern-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>DOKFA LIFE | Premium Sofa Factory</title>
+
+    <meta property="og:title" content="DOKFA LIFE | Premium Furniture Factory" />
+    <meta property="og:description" content="ໂຮງງານເຟີນີເຈີຄຸນນະພາບສູງໃນວຽງຈັນ. 万象高品质家具工厂，沙发、床垫厂家直销，支持高级定制。" />
+    <meta property="og:image" content="https://dokfa.life/images/hero1.webp" />
+    <meta property="og:url" content="https://dokfa.life/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DOKFA LIFE" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 极致加载速度优化：只加载必要的字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Noto+Sans+Lao:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Lao', sans-serif; background-color: #fff; }
+        .lao { font-family: 'Noto Sans Lao', sans-serif; }
+        .img-placeholder { background: #f3f4f6; position: relative; overflow: hidden; }
+        /* 针对手机端优化的滚动流畅度 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 </head>
-<body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="navbar-logo-link" >
-                <img src="./image/logo.png" alt="舒适家居Logo" class="logo-img">
+<body class="antialiased">
+
+    <nav class="flex justify-between items-center px-6 py-5 sticky top-0 bg-white/90 backdrop-blur-md z-50">
+        <div class="flex flex-col">
+            <span class="font-bold text-xl tracking-tighter leading-none">DOKFA LIFE</span>
+            <span class="text-[10px] text-yellow-600 uppercase tracking-widest font-semibold mt-1">Sofa Manufacture</span>
+        </div>
+        <!-- <div class="flex items-center space-x-4">
+            <a href="https://wa.me/8562098412191" class="bg-black text-white px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider">WhatsApp</a>
+        </div> -->
+
+        <div class="flex items-center space-x-4">
+            <a href="https://wa.me/8562098412191" target="_blank" class="bg-[#25D366] text-white px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center shadow-sm hover:shadow-md transition-all">
+                <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                    WhatsApp
             </a>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <ul class="navbar-menu" id="navbarMenu">
-                <li><a href="index.html" data-zh="首页" data-lo="ໜ້າຫຼັກ">首页</a></li>
-                <li><a href="products.html" data-zh="产品展示" data-lo="ສະແດງຜະລິດຕະພັນ">产品展示</a></li>
-                <li><a href="about.html" data-zh="关于我们" data-lo="ກ່ຽວກັບພວກເຮົາ">关于我们</a></li>
-                <li><a href="contact.html" data-zh="联系我们" data-lo="ຕິດຕໍ່ພວກເຮົາ">联系我们</a></li>
-            </ul>
         </div>
     </nav>
 
-    <!-- 英雄区 / Banner -->
-    <!-- <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-zh="打造您的理想居家空间" data-lo="ສ້າງພື້ນທີ່ເຮືອນທີ່ເຫມາະສົມຂອງທ່ານ">打造您的理想居家空间</h1>
-                <p data-zh="经济实用 · 品质保证 · 可持续设计" data-lo="ປະຫຍັດ · ຄຸນນະພາບດີ · ການອອກແບບແບບຍືນຍົງ">经济实用 · 品质保证 · 可持续设计</p>
-                <div class="hero-image">
-                    <img src="./ChatGPT Image 2025年10月4日 15_29_57.png" alt="主打沙发">
+    <section class="relative w-full h-[70vh] img-placeholder">
+        <img src="images/hero1.webp" alt="Sofa" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-10 left-6 right-6 text-white">
+            <h1 class="text-4xl font-bold leading-tight mb-2">Art of Living.</h1>
+            <p class="lao text-sm opacity-80 border-l-2 border-yellow-500 pl-3">ໂຊຟາທີ່ອອກແບບມາເພື່ອຄວາມຫຼູຫຼາ ແລະ ສະບາຍ<br>(设计，只为奢华与舒适)</p>
+        </div>
+    </section>
+
+    <main class="py-8 bg-white">
+    <div class="px-6 mb-6">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Factory Collection</h2>
+        <p class="lao text-sm text-gray-400 mt-1">ເຟີນີເຈີຄົບວົງຈອນ (家具全系列定制)</p>
+    </div>
+
+    <div class="flex overflow-x-auto gap-4 no-scrollbar pb-8 snap-x snap-mandatory scroll-px-8" style="-webkit-overflow-scrolling: touch;">
+        
+        <div class="flex-none w-4"></div>
+
+        <div class="flex-none w-[78vw] snap-center space-y-4 transition-transform duration-300">
+            <div class="rounded-[2rem] overflow-hidden aspect-[4/5] bg-[#f8f9fa] shadow-xl shadow-black/5 border border-black/5">
+                <img src="images/sofa.webp" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <div class="px-1">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-lg font-bold text-gray-900">Premium Sofa</h3>
+                    <span class="text-[9px] font-bold text-yellow-600 border border-yellow-600/30 bg-yellow-50/50 px-2 py-1 rounded-sm tracking-wider uppercase">In Stock</span>
                 </div>
-                <div class="btn-group">
-                    <a href="products.html" class="btn btn-primary" data-zh="查看所有沙发" data-lo="ເບິ່ງໂຊຟາທັງໝົດ">查看所有沙发</a>
-                    <a href="contact.html" class="btn btn-secondary" data-zh="联系我们" data-lo="ຕິດຕໍ່ພວກເຮົາ">联系我们</a>
-                </div>
+                <p class="lao text-[11px] text-gray-500 font-light">ໂຊຟາອອກແບບພິເສດ, ນັ່ງສະບາຍ (高端定制沙发)</p>
             </div>
         </div>
-    </section> -->
-    <section class="hero-slider-section"> 
-    <div class="slider-container" id="mainSlider">
-        <div class="slide active">
-            <img src="./Sova927.png"  class="slider-image"> 
+
+        <div class="flex-none w-[78vw] snap-center space-y-4 transition-transform duration-300">
+            <div class="rounded-[2rem] overflow-hidden aspect-[4/5] bg-[#f8f9fa] shadow-xl shadow-black/5 border border-black/5">
+                <img src="images/bed.webp" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <div class="px-1">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-lg font-bold text-gray-900">Luxury Bed</h3>
+                    <span class="text-[9px] font-bold text-gray-500 border border-gray-200 bg-gray-50 px-2 py-1 rounded-sm tracking-wider uppercase">Custom</span>
+                </div>
+                <p class="lao text-[11px] text-gray-500 font-light">ຕຽງນອນຫຼູຫຼາ, ຊ່ວຍໃຫ້ຫຼັບສະບາຍ (奢华静音大床)</p>
+            </div>
         </div>
-        <div class="slide">
-            <img src="./Sova304.png"  class="slider-image"> 
+
+        <div class="flex-none w-[78vw] snap-center space-y-4 transition-transform duration-300">
+            <div class="rounded-[2rem] overflow-hidden aspect-[4/5] bg-[#f8f9fa] shadow-xl shadow-black/5 border border-black/5">
+                <img src="images/table.webp" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <div class="px-1">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-lg font-bold text-gray-900">Dining Set</h3>
+                    <span class="text-[9px] font-bold text-yellow-600 border border-yellow-600/30 bg-yellow-50/50 px-2 py-1 rounded-sm tracking-wider uppercase">New</span>
+                </div>
+                <p class="lao text-[11px] text-gray-500 font-light">ໂຕະອາຫານທັນສະໄໝ (现代简约餐桌椅)</p>
+            </div>
         </div>
-        <div class="slide">
-            <img src="./image/6636.png"  class="slider-image"> 
+
+        <div class="flex-none w-8 relative flex items-center justify-center">
+            <span class="text-gray-300 text-xs transform -rotate-90 whitespace-nowrap tracking-widest uppercase">End of List</span>
         </div>
-        <button class="slider-control prev">❮</button>
-        <button class="slider-control next">❯</button>
+
     </div>
+</main>
+
     
-    <div class="hero-text-card">
-        <h1 data-zh="提升您的空间格调" data-lo="ຍົກລະດັບພື້ນທີ່ຂອງທ່ານ">提升您的空间格调</h1>
-        <p data-zh="体验舒适的居家生活，为您的家人选择美好。在日常生活中..." data-lo="ສຳຜັດຊີວິດໃນເຮືອນທີ່ສະດວກສະບາຍ, ເລືອກສິ່ງທີ່ດີທີ່ສຸດໃຫ້ຄອບຄົວຂອງທ່ານ. ໃນຊີວິດປະຈຳວັນ...">体验舒适的居家生活，为您的家人选择美好。在日常生活中...</p>
-        <a href="products.html" class="btn btn-shop-now" data-zh="立即选购" data-lo="ຊື້ດຽວນີ້">立即选购</a>
+    <footer class="bg-stone-50 p-8 text-center mt-10 border-t border-gray-100">
+    <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-6">Contact & Location</p>
+    
+    <div class="flex flex-col space-y-4 mb-12">
+        <a href="tel:8562098412191" class="bg-black text-white py-4 rounded-2xl text-sm font-bold shadow-lg shadow-gray-200 flex items-center justify-center">
+            <span class="mr-2">📞</span> Call: +856 20 9841 2191
+        </a>
+        <a href="https://wa.me/8562098412191" target="_blank" class="bg-[#25D366] text-white py-4 rounded-2xl text-sm font-bold flex items-center justify-center shadow-lg shadow-green-100">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp Us
+        </a>
     </div>
 
-</section>
+    <div class="space-y-8 text-left max-w-sm mx-auto">
+    
+    <a href="https://maps.app.goo.gl/5xaSbxnNHK8QhB3p8" target="_blank" class="block group">
+        <div>
+            <p class="text-[10px] font-bold text-yellow-600 uppercase tracking-widest mb-2 flex justify-between items-center">
+                <span>Main Showroom (ຮ້ານວາງສະແດງ)</span>
+                <span class="text-xs">📍 ຄລິກການນຳທາງ</span>
+            </p>
+            <p class="text-sm font-semibold group-hover:text-yellow-600 transition-colors">Dokfa Furniture, Vientiane</p>
 
-    <!-- 品类目录 -->
-    <section class="category-section">
-        <div class="container">
-            <div class="category-header">
-                <div class="decorative-line left"></div>
-                <h2 data-zh="产品分类" data-lo="ກຸ່ມຜະລິດຕະພັນ">产品分类</h2>
-                <div class="decorative-line right"></div>
-                <p class="subtitle" data-zh="探索我们的精选系列" data-lo="ຄົ້ນຫາສິນຄ້າທີ່ໄດ້ຮັບການເລືອກສຳລັບ">探索我们的精选系列</p>
+            <div class="rounded-xl overflow-hidden aspect-video bg-gray-100 shadow-sm border border-gray-100 mb-2">
+                <img src="images/shop.webp" loading="lazy" class="w-full h-full object-cover" alt="Factory Production">
             </div>
-            <div class="category-grid">
-                <!-- 沙发品类 -->
-                <div class="category-card" data-category="sofa">
-                    <div class="category-image-wrapper">
-                        <img src="./image/sofa-placeholder.png" alt="沙发" class="category-image" data-zh="沙发" data-lo="ໂຊຟາ">
-                        <div class="category-overlay">
-                            <div class="category-icon">🛋️</div>
-                        </div>
-                    </div>
-                    <h3 class="category-title" data-zh="沙发" data-lo="ໂຊຟາ">沙发</h3>
-                    <p class="category-description" data-zh="舒适沙发，打造温馨家居" data-lo="ໂຊຟາທີ່ສະດວກສະບາຍ, ສ້າງສະພາບເຮືອນທີ່ອົບອຸ່ນ">舒适沙发，打造温馨家居</p>
-                    <a href="products.html?category=sofa" class="btn btn-category">查看产品</a>
-                </div>
 
-                <!-- 皮床品类 -->
-                <div class="category-card" data-category="bed">
-                    <div class="category-image-wrapper">
-                        <img src="./image/bed-placeholder.png" alt="皮床" class="category-image" data-zh="皮床" data-lo="ເຕົ້າໜັງ">
-                        <div class="category-overlay">
-                            <div class="category-icon">🛏️</div>
-                        </div>
-                    </div>
-                    <h3 class="category-title" data-zh="皮床" data-lo="ເຕົ້າໜັງ">皮床</h3>
-                    <p class="category-description" data-zh="豪华皮床，尊贵睡眠体验" data-lo="ເຕົ້າໜັງທີ່ຫຼາຍຊະນິດ, ປະສົບການນອນນອນທີ່ສະບາຍດີ">豪华皮床，尊贵睡眠体验</p>
-                    <a href="products.html?category=bed" class="btn btn-category">查看产品</a>
-                </div>
-
-                <!-- 餐桌椅品类 -->
-                <div class="category-card" data-category="dining">
-                    <div class="category-image-wrapper">
-                        <img src="./image/dining-placeholder.png" alt="餐桌椅" class="category-image" data-zh="餐桌椅" data-lo="ໂຕະແລະເຄື່ອນນັ່ງ">
-                        <div class="category-overlay">
-                            <div class="category-icon">🍽️</div>
-                        </div>
-                    </div>
-                    <h3 class="category-title" data-zh="餐桌椅" data-lo="ໂຕະແລະເຄື່ອນນັ່ງ">餐桌椅</h3>
-                    <p class="category-description" data-zh="精美餐桌椅，享受用餐时光" data-lo="ໂຕະແລະເຄື່ອນນັ່ງທີ່ສວຍງາມ, ຮັກສາການອາຫານທີ່ມີຄຸນນະພາບ">精美餐桌椅，享受用餐时光</p>
-                    <a href="products.html?category=dining" class="btn btn-category">查看产品</a>
-                </div>
-            </div>
+            <p class="lao text-xs text-gray-500 mt-1">ຮ້ານດອກຟ້າເຟີນີເຈີ, ວຽງຈັນ</p>
         </div>
-    </section>
+    </a>
 
-    <!-- 热门产品 -->
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center mb-2" data-zh="热门沙发推荐" data-lo="ໂຊຟາຍອດນິຍົມແນະນຳ">热门沙发推荐</h2>
-            <div class="product-grid" id="featuredProducts">
-                <!-- 产品 1 -->
-                <div class="product-card">
-                    <img src="./Gemini_Generated_Image_wvit3qwvit3qwvit.png" alt="经典三人沙发" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title" data-zh="经典三人沙发" data-lo="ໂຊຟາ 3 ທີ່ນັ່ງຄລາສສິກ">经典三人沙发</h3>
-                        <p class="product-description" data-zh="简约设计，舒适耐用，适合各种家居风格" data-lo="ການອອກແບບແບບງ່າຍດາຍ, ສະດວກສະບາຍແລະທົນທານ, ເໝາະກັບທຸກສະໄຕເຮືອນ">简约设计，舒适耐用，适合各种家居风格</p>
-                        <div class="product-price">3,500,000 LAK</div>
-                        <a href="product-detail.html?id=1" class="btn btn-primary" data-zh="查看详情" data-lo="ເບິ່ງລາຍລະອຽດ">查看详情</a>
-                    </div>
-                </div>
-
-                <!-- 产品 2 -->
-                <div class="product-card">
-                    <img src="./ChatGPT Image 2025年10月4日 15_09_21.png" alt="现代转角沙发" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title" data-zh="现代转角沙发" data-lo="ໂຊຟາມຸມທີ່ທັນສະໄໝ">现代转角沙发</h3>
-                        <p class="product-description" data-zh="大空间设计，完美适配客厅角落" data-lo="ການອອກແບບພື້ນທີ່ຂະຫນາດໃຫຍ່, ເໝາະສົມກັບມຸມຫ້ອງຮັບແຂກ">大空间设计，完美适配客厅角落</p>
-                        <div class="product-price">5,800,000 LAK</div>
-                        <a href="product-detail.html?id=2" class="btn btn-primary" data-zh="查看详情" data-lo="ເບິ່ງລາຍລະອຽດ">查看详情</a>
-                    </div>
-                </div>
-
-                <!-- 产品 3 -->
-                <div class="product-card">
-                    <img src="./Gemini_Generated_Image_f2prpef2prpef2pr.png" alt="舒适单人沙发" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title" data-zh="舒适单人沙发" data-lo="ໂຊຟາດຽວທີ່ສະດວກສະບາຍ">舒适单人沙发</h3>
-                        <p class="product-description" data-zh="紧凑型设计，节省空间的理想选择" data-lo="ການອອກແບບຂະໜາດກະທັດຮັດ, ເລືອກທີ່ດີທີ່ສຸດສຳຫຼັບການປະຫຍັດພື້ນທີ່">紧凑型设计，节省空间的理想选择</p>
-                        <div class="product-price">1,800,000 LAK</div>
-                        <a href="product-detail.html?id=3" class="btn btn-primary" data-zh="查看详情" data-lo="ເບິ່ງລາຍລະອຽດ">查看详情</a>
-                    </div>
-                </div>
-
-                <!-- 产品 4 -->
-                <div class="product-card">
-                    <img src="./ChatGPT Image 2025年10月4日 15_38_05.png" alt="豪华皮质沙发" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title" data-zh="豪华皮质沙发" data-lo="ໂຊຟາໜັງທີ່ຫຼູຫຼາ">豪华皮质沙发</h3>
-                        <p class="product-description" data-zh="高端皮革面料，彰显品味与格调" data-lo="ວັດສະດຸໜັງຊັ້ນສູງ, ສະແດງລົດຊາດແລະຄວາມສະຫງ່າງາມ">高端皮革面料，彰显品味与格调</p>
-                        <div class="product-price">7,200,000 LAK</div>
-                        <a href="product-detail.html?id=4" class="btn btn-primary" data-zh="查看详情" data-lo="ເບິ່ງລາຍລະອຽດ">查看详情</a>
-                    </div>
-                </div>
+    <div class="block border-t border-gray-200 pt-6">
+        <a href="https://maps.app.goo.gl/AaWHtypVFmeqSgfz5" target="_blank" class="block group">
+            <div>
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 flex justify-between items-center">
+                <span>Factory 01 (ໂຮງງານ 1)</span>
+                <span class="text-xs">📍 ຄລິກການນຳທາງ</span>
+            </p>
+            <p class="text-sm font-semibold mb-3">Main Production Base</p>
+            
+            <div class="rounded-xl overflow-hidden aspect-video bg-gray-100 shadow-sm border border-gray-100 mb-2">
+                <img src="images/factory1.webp" loading="lazy" class="w-full h-full object-cover" alt="Factory Production">
             </div>
+            
+            <p class="text-[10px] text-gray-400 italic flex items-center mt-2">
+                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                ສະຖານທີ່ຜະລິດພາຍໃນ 
+            </p>
+            </div>
+        </a>
+    </div>
 
-            <div class="text-center mt-3">
-                <a href="products.html" class="btn btn-secondary" data-zh="查看更多产品" data-lo="ເບິ່ງຜະລິດຕະພັນເພີ່ມເຕີມ">查看更多产品</a>
+    <div class="block border-t border-gray-200 pt-6 mt-6">
+        <a href="https://maps.app.goo.gl/1WraB1mjGmtQ6BS29" target="_blank" class="block group">
+            <div>
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 flex justify-between items-center">
+                <span>Factory 02 (ໂຮງງານ 2)</span>
+                <span class="text-xs">📍 ຄລິກການນຳທາງ</span>
+            </p>
+            <p class="text-sm font-semibold mb-3">Main Production Base</p>
+            
+            <div class="rounded-xl overflow-hidden aspect-video bg-gray-100 shadow-sm border border-gray-100 mb-2">
+                <img src="images/factory2.webp" loading="lazy" class="w-full h-full object-cover" alt="Factory Production">
             </div>
-        </div>
-    </section>
+            
+            <p class="text-[10px] text-gray-400 italic flex items-center mt-2">
+                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                ສະຖານທີ່ຜະລິດພາຍໃນ 
+            </p>
+            </div>
+        </a>
+    </div>
 
-    <!-- 品牌理念 -->
-    <section class="features">
-        <div class="container">
-            <h2 class="text-center" data-zh="为什么选择我们？" data-lo="ເປັນຫຍັງຕ້ອງເລືອກພວກເຮົາ?">为什么选择我们？</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h3 data-zh="经济实用" data-lo="ປະຫຍັດ">经济实用</h3>
-                    <p data-zh="高性价比产品，让每个家庭都能享受舒适" data-lo="ຜະລິດຕະພັນທີ່ມີຄ່າໃຊ້ຈ່າຍຕໍ່າ ເພື່ອໃຫ້ທຸກຄົນສາມາດມີຄວາມສະດວກສະບາຍ">高性价比产品，让每个家庭都能享受舒适</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✨</div>
-                    <h3 data-zh="品质保证" data-lo="ຄຸນນະພາບດີ">品质保证</h3>
-                    <p data-zh="精选材料，严格质检，耐用可靠" data-lo="ວັດສະດຸທີ່ເລືອກສັນ, ກວດກາຄຸນນະພາບຢ່າງເຂັ້ມງວດ, ທົນທານແລະເຊື່ອຖືໄດ້">精选材料，严格质检，耐用可靠</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌱</div>
-                    <h3 data-zh="可持续发展" data-lo="ການພັດທະນາແບບຍືນຍົງ">可持续发展</h3>
-                    <p data-zh="环保材料，支持可持续生产理念" data-lo="ວັດສະດຸທີ່ເປັນມິດກັບສິ່ງແວດລ້ອມ, ສະໜັບສະໜູນແນວຄວາມຄິດການຜະລິດແບບຍືນຍົງ">环保材料，支持可持续生产理念</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🏪</div>
-                    <h3 data-zh="实体店体验" data-lo="ປະສົບການຮ້ານຈິງ">实体店体验</h3>
-                    <p data-zh="欢迎到店试坐，亲身感受产品品质" data-lo="ຍິນດີຕ້ອນຮັບທ່ານມາຮ້ານເພື່ອທົດລອງນັ່ງ, ສຳຜັດຄຸນນະພາບຜະລິດຕະພັນດ້ວຍຕົວເອງ">欢迎到店试坐，亲身感受产品品质</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- 行动号召 -->
-    <section class="section" style="background-color: var(--color-bg-secondary);">
-        <div class="container text-center">
-            <h2 data-zh="准备好为您的家选择完美沙发了吗？" data-lo="ພ້ອມທີ່ຈະເລືອກໂຊຟາທີ່ສົມບູນແບບສຳລັບເຮືອນຂອງທ່ານແລ້ວບໍ?">准备好为您的家选择完美沙发了吗？</h2>
-            <p class="mt-1 mb-2" data-zh="欢迎到店体验，我们的专业团队随时为您服务" data-lo="ຍິນດີຕ້ອນຮັບທ່ານມາຮ້ານ, ທີມງານຜູ້ຊ່ຽວຊານຂອງພວກເຮົາພ້ອມໃຫ້ບໍລິການທ່ານຕະຫຼອດເວລາ">欢迎到店体验，我们的专业团队随时为您服务</p>
-            <div class="btn-group">
-                <a href="contact.html" class="btn btn-primary" data-zh="立即联系" data-lo="ຕິດຕໍ່ທັນທີ">立即联系</a>
-                <a href="about.html" class="btn btn-secondary" data-zh="了解更多" data-lo="ຮຽນຮູ້ເພີ່ມເຕີມ">了解更多</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-zh="关于我们" data-lo="ກ່ຽວກັບພວກເຮົາ">关于我们</h3>
-                    <p data-zh="我们致力于为老挝家庭提供高品质、经济实用的沙发产品。" data-lo="ພວກເຮົາມຸ່ງໝັ້ນທີ່ຈະສະໜອງຜະລິດຕະພັນໂຊຟາຄຸນນະພາບສູງແລະປະຫຍັດໃຫ້ກັບຄອບຄົວລາວ.">我们致力于为老挝家庭提供高品质、经济实用的沙发产品。</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-zh="快速链接" data-lo="ລິ້ງດ່ວນ">快速链接</h3>
-                    <ul>
-                        <li><a href="index.html" data-zh="首页" data-lo="ໜ້າຫຼັກ">首页</a></li>
-                        <li><a href="products.html" data-zh="产品展示" data-lo="ສະແດງຜະລິດຕະພັນ">产品展示</a></li>
-                        <li><a href="about.html" data-zh="关于我们" data-lo="ກ່ຽວກັບພວກເຮົາ">关于我们</a></li>
-                        <li><a href="contact.html" data-zh="联系我们" data-lo="ຕິດຕໍ່ພວກເຮົາ">联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-zh="联系方式" data-lo="ຂໍ້ມູນຕິດຕໍ່">联系方式</h3>
-                    <ul>
-                        <li data-zh="📍 地址：老挝万象市中心" data-lo="📍 ທີ່ຢູ່: ໃຈກາງນະຄອນຫຼວງວຽງຈັນ, ລາວ">📍 地址：老挝万象市中心</li>
-                        <li data-zh="📞 电话：+856 20 1234 5678" data-lo="📞 ໂທລະສັບ: +856 20 1234 5678">📞 电话：+856 20 1234 5678</li>
-                        <li data-zh="✉️ 邮箱：info@sofalaos.com" data-lo="✉️ ອີເມລ: info@sofalaos.com">✉️ 邮箱：info@sofalaos.com</li>
-                        <li data-zh="🕒 营业时间：周一至周日 9:00-18:00" data-lo="🕒 ເວລາເປີດເຮັດການ: ຈັນ-ອາທິດ 9:00-18:00">🕒 营业时间：周一至周日 9:00-18:00</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 <span data-zh="舒适家居 - 保留所有权利" data-lo="ເຮືອນທີ່ສະດວກ - ສະຫງວນລິຂະສິດທັງໝົດ">舒适家居 - 保留所有权利</span></p>
-            </div>
-        </div>
+    <p class="mt-16 text-[10px] text-gray-300">© 2026 DOKFA LIFE MANUFACTURE.</p>
     </footer>
-
-    <!-- 悬浮语言切换按钮 -->
-    <button class="floating-language-switcher" id="floatingLangSwitcher" onclick="toggleLanguage()">ລາວ</button>
-
-    <script src="modern-script.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 20, // 卡片之间的间距
+        loop: true,       // 开启无限循环魔法
+        autoplay: {
+            delay: 3500,  // 每3.5秒自动滑动一次
+            disableOnInteraction: false, // 客户手动滑了之后，依然继续自动轮播
+        }
+    });
+</script> -->
 </body>
 </html>
